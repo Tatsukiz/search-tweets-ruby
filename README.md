@@ -1,12 +1,20 @@
 # Ruby Tweet search client
 
-This Ruby client is written to work with the Twitter premium and enterprise versions of Tweet Search.  This client is a command-line app that supports the following features:
+//Under construction: 
+
+This Ruby client is written to work with the Twitter premium and enterprise versions of Tweet Search. 
 
 + Works with:
-	+ Premium Search Tweets API: 30-day search endpoint
-	+ Premium Search Tweets API: Full-archive search endpoint
-	+ Enterprise Search API: 30-day search endpoint
-	+ Enterprise Search API: Full-archive search endpoint
+	+ Labs recent search only. 
+	+ Master branch is a 'generalist' version that handles enterprise, premium, and Labs search. 
+	  + Premium Search Tweets API: 30-day search endpoint
+	  + Premium Search Tweets API: Full-archive search endpoint
+	  + Enterprise Search API: 30-day search endpoint
+	  + Enterprise Search API: Full-archive search endpoint
+	
+	
+This client is a command-line app that supports the following features:
+	
 + Can manage an array of filters/rules/queries, making requests for each.
 + Returns total count for entire request period, aggregating the total counts across multiple requests.
 + Supports flexible ways to specify search period. E.g., ```-s 7d``` specifies the past week. Other patterns such as ```YYYY-MM-DD HH:mm```, standard Twitter ISO timestamps, and the enterprise ```YYYYMMDDhhmm``` pattern are also supported.
