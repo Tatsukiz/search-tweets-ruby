@@ -72,8 +72,20 @@ By default, this file has a path of ```./config/config.yaml```. You can overwrit
 
 Here are the default configuration settings with descriptions of each option:
 
-```
+```yaml
+#Client options.
+options:
+  url: https://api.twitter.com/labs/1/tweets/search
+  search_type: labs #premium or enterprise or labs
+  archive: recent #fullarchive or 30day or recent
+  max_results: 100 #For Labs this max is 100.
+  format: compact
+  write_mode: so # options: files, so/standard/standard-out --> Store activities in local files or print to system out?
+  out_box: ./output # Folder where retrieved data goes.
 
+#Credentials.
+auth:
+  app_token:
 
 ```
 
