@@ -1,8 +1,8 @@
-# Ruby Tweet search client
+# Ruby Labs recent search client 
 
 //Under construction: 
 
-This Ruby client is written to work with the Twitter premium and enterprise versions of Tweet Search. 
+This Ruby client was written to work with the Twitter Developer Labs recent search endpoint. It is a refactored version of the original app written for the premium and enterprise tiers of Twitter search endpoints. 
 
 + Works with:
 	+ Labs recent search only. 
@@ -10,11 +10,16 @@ This Ruby client is written to work with the Twitter premium and enterprise vers
 	
 This client is a command-line app that supports the following features:
 	
-+ Can manage an array of filters/rules/queries, making requests for each.
-+ Returns total count for entire request period, aggregating the total counts across multiple requests.
-+ Supports flexible ways to specify search period. E.g., ```-s 7d``` specifies the past week. Other patterns such as ```YYYY-MM-DD HH:mm```, standard Twitter ISO timestamps, and the enterprise ```YYYYMMDDhhmm``` pattern are also supported.
-+ Writes to files or standard out. When writing files, one file is written for every API response. File names are based on query syntax, and are serialized. (Writing to a datastore... coming soon?)
+
+
 + Can stop making requests after a specified number. If your search query and period match millions of Tweets that would require hundreds of requests, you could have the client stop after four requests by adding the ```-x 4``` argument. 
+
++ Supports flexible ways to specify search period. E.g., ```-s 12h``` specifies the past 12 hours. Other timestamp formats/patterns such as ```YYYY-MM-DD HH:mm```, standard Twitter ISO timestamps, and the enterprise ```YYYYMMDDhhmm``` pattern are also supported.
+
++ Writes to a variety of outputs. It can write to json text files, echo JSON payloads to standard out, or return a single data structure. When writing files, one file is written for every API response. File names are based on query syntax, and are serialized. 
+
++ Can manage an array of filters/rules/queries, making requests for each.
+
 	
 
 ----------------
